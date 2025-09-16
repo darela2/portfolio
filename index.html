@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Meta básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO -->
+    <meta name="description" content="Portfolio profesional de Darela, desarrollador web front-end. Proyectos, habilidades y experiencia.">
+    <meta name="author" content="David Redondo Lara">
+    <meta name="keywords" content="Darela, David Redondo, Portfolio, Desarrollador Web, Desarrollador de Software, Frontend, Backend">
+  
+    <title>Darela - Portfolio Web</title>
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/256/6472/6472028.png">
+  
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Darela - Portfolio Web">
+    <meta property="og:description" content="Portfolio profesional de David Redondo Lara.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/256/6472/6472028.png">
+    <meta property="og:url" content="https://tu-url.com"> <!-- reemplaza por tu dominio real -->
+    <meta property="og:type" content="website">
+  
+    <!-- Accesibilidad -->
+    <meta name="theme-color" content="#1e3a8a"> <!-- azul tailwind -->
+    <link rel="canonical" href="https://tu-url.com"> <!-- ajusta tu dominio -->
+
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="CSS/estilos.css">
+
+    <!-- Configuración del modo oscuro en Tailwind -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+  </head>
+  
+  <body class="bg-white text-gray-800 dark:!bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- Botón modo oscuro -->
+  <div class="fixed top-4 right-4 z-50" data-aos="fade-up" data-aos-duration="1000">
+    <button id="toggle-theme" class="bg-blue-600 dark:bg-yellow-400 text-white dark:text-gray-900 p-2 rounded-full shadow-md hover:scale-105 transition">
+      <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <!-- Header/Navegación -->
+  <nav data-aos="fade-up" data-aos-duration="1000">
+    <div class="arriba">
+      <div class="logo w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex justify-center">
+        <img src="IMG/darela.png" alt="Mi Logo" class="h-20 sm:h-24 md:h-28 lg:h-32 object-contain" />
+      </div>
+    </div>
+
+    <div class="menu-principal">
+      <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+      <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+      <a href="#experiencia"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
+      <a href="#educacion"><i class="fa-solid fa-user-graduate"></i> Educación</a>
+      <a href="#habilidades"><i class="fas fa-tools"></i> Habilidades</a>
+      <a href="#proyectos"><i class="fas fa-laptop-code"></i> Proyectos</a>
+      <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Bienvenida -->
+  <div class="mensaje" data-aos="fade-up" data-aos-duration="1000">
+    <p class="text-white">¡Hola! Bienvenid@ a mi portfolio.</p>
+  </div>
+
+  <!-- Contenido Principal -->
+  <main class="bg-white dark:!bg-gray-900">
+
+    <!-- HERO / INTRO -->
+    <section class="py-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container text-center flex flex-col items-center justify-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hey, soy Darela</h1>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Desarrollador de software apasionado por crear experiencias digitales atractivas y funcionales.</p>
+      </div>
+    </section>
+    
+
+      <hr class="border-gray-300 dark:border-white-700" /><br>
+
+      <!-- SOBRE MÍ -->
+      <section id="sobre-mi" aria-label="Ir a sección Sobre mí" class="py-16" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+          <div class="row align-items-center justify-content-around">
+            <div class="col-md-3 col-sm-5 col-5 mb-4 mb-md-0">
+              <img src="IMG/ghibli.png" alt="Foto de perfil" class="rounded-3xl shadow-lg w-full" data-aos="fade-right">
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+              <h2 class="text-3xl font-bold mb-3">Sobre mí</h2>
+              <p>¡Hola!</p>
+              <p>Me llamo David (aunque también puedes llamarme Darela), soy un desarrollador de software con ganas de aprender y poner a prueba mis habilidades a través de soluciones innovadoras y funcionales. Me especializo en crear aplicaciones web optimizadas y orientadas al usuario, utilizando las mejores prácticas en el desarrollo frontend y backend.</p>
+              <p>Mi objetivo como desarrollador es convertir cada desafío en una oportunidad para crecer y enfocarme en nuevos proyectos y experiencias.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br><hr class="border-gray-300 dark:border-white-700" />
+
+      <!-- EXPERIENCIA -->
+      <section id="experiencia" aria-label="Ir a sección Experiencia" class="py-16" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12">Experiencia</h2>
+          
+           <!-- Copermática -->
+            <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+              <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEHSeIcY-6pLA/company-logo_200_200/B4DZaqDLKwG0AI-/0/1746609681546/copermatica_logo?e=2147483647&v=beta&t=ZOCsgTpnyrP_QFd4eMUei0jNnIbMZBhTKuEMl_Y-zyY" alt="Copermática" class="w-16 h-16 object-contain rounded-2xl" />
+              <div>
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Desarrollador de software</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Copermática | Tomelloso — 2025</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                  Periodo de prácticas como desarrollador de software, participando en el desarrollo colaborativo de aplicaciones empresariales a través del control de versiones Git y el entorno Azure DevOps.
+                </p>
+              </div>
+            </div>
+            <br>
+            <!-- Yotta Desarrollos -->
+            <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+              <img src="https://www.lokinn.com/media/empresas/3599879/logo.png" alt="Yotta Desarrollos" class="w-16 h-16 object-contain rounded-2xl" />
+              <div>
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Prácticas en Empresa</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Yotta Desarrollos Tecnológicos | Albacete — 2024</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                  Colaboración en el acceso a datos a través de procesos de web scraping, utilizando para ello procesos de extracción de información en páginas web estáticas (xPath, cURL) y dinámicas (Puppeteer).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br><hr class="border-gray-300 dark:border-white-700" />
+
+      <!-- EDUCACIÓN -->
+      <section id="educacion" aria-label="Ir a sección Educación" class="py-16" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12">Educación</h2>
+        
+          <div class="space-y-8">
+            <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+              <img src="https://www.formacion.cc/img_centros/249/logoCentro.gif" alt="CEAT" class="w-16 h-16 object-contain rounded-2xl" />
+              <div>
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Curso de Diseño Web Multidispositivo con IA</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Centro de Estudios CEAT, Tomelloso — 2025</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-400">
+                  Curso de diseño y programación orientado al manejo de páginas web a través de herramientas como Wordpress y Javascript.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+              <img src="https://media-exp1.licdn.com/dms/image/C560BAQFc1q3IVGAQ9g/company-logo_200_200/0/1519871479807?e=2159024400&v=beta&t=tHkrFjtqDNu_fUfHIn07v7Fpb95cigmv0iVyIo5Iu54" alt="IES Da Vinci" class="w-16 h-16 object-contain rounded-2xl" />
+              <div>
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Grado Superior en Desarrollo de Aplicaciones Web</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">IES Leonardo Da Vinci, Albacete — 2022 - 2024</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-400">
+                  Formación profesional especializada en el diseño, desarrollo y mantenimiento de aplicaciones web utilizando tecnologías frontend y backend.
+                </p>
+              </div>
+            </div>
+          
+            <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
+              <img src="https://multimedia.infojobs.net/api/v1/tenants/c7e2b9c1-8480-43b0-ad9e-000c17aa2cbb/domains/718302b6-5343-43d3-a8a3-829dc3da0893/buckets/6f3ab1cc-5920-4f4e-b131-46a4587a0e1f/images/f2/f296170a-07d8-41c7-95e8-cdf22da9bf8c?jwt=eyJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTM5MjIzNDEsInJxcyI6IkdFVFxcL3RlbmFudHMvYzdlMmI5YzEtODQ4MC00M2IwLWFkOWUtMDAwYzE3YWEyY2JiL2RvbWFpbnMvNzE4MzAyYjYtNTM0My00M2QzLWE4YTMtODI5ZGMzZGEwODkzL2J1Y2tldHMvNmYzYWIxY2MtNTkyMC00ZjRlLWIxMzEtNDZhNDU4N2EwZTFmL2ltYWdlcy9mMi9mMjk2MTcwYS0wN2Q4LTQxYzctOTVlOC1jZGYyMmRhOWJmOGMiLCJtZXRhZGF0YSI6eyJydWxlIjp7InZlcnNpb24iOiIyMDE2LTEwIiwiYWN0aW9ucyI6W119fX0.l3AYSQL3_KYNRkgUXLutVJlaCpOZsek1txfEGVbOnq-XSjyTRTIMJJWWmQqHjCIaZfHXdlYrkJDahvyTPTlx_9cvWF1n6C8HwTJRymsyMLQ7TE7wf0FJPzqjm6x-_lh2FOQYnEwk5VjLm8iZ9GTHuXWq-9lG-SINJAg2r3FLdhWV1bdbGRZmudZ8WUdtChRJ6wbCHxSmMd7yhwByKrA1Ie2I2lhXO-5VoxHHRns7Qp-pVx8CV_nZpQSbd1ZGA0e6uLkiBdfdmobdRWVl1GShtgZyojfjzbEZgwxjAS1WiaePoj6qB9ips8Q7kRrr4Ab4_C74Oieh9MkUmVGl_tPXzA&AccessKeyId=d724d9a53d95a810" alt="OpenWebinars" class="w-16 h-16 object-contain rounded-2xl" />
+              <div>
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Curso de Introducción al Diseño Web y UX/UI</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">OpenWebinars — 2023</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-400">
+                  Curso orientado a crear interfaces atractivas y funcionales, enfocado en la experiencia del usuario con herramientas modernas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br><hr class="border-gray-300 dark:border-white-700" />
+
+      <!-- HABILIDADES -->
+      <section id="habilidades" aria-label="Ir a sección Habilidades" class="py-16" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-12">Habilidades</h2>
+
+          <!-- Frontend -->
+          <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12" data-aos="zoom-in">
+            <div><i class="fab fa-html5 text-4xl text-orange-600"></i><p class="mt-2">HTML5</p></div>
+            <div><i class="fab fa-css3-alt text-4xl text-blue-600"></i><p class="mt-2">CSS3</p></div>
+            <div><i class="fab fa-js text-4xl text-yellow-500"></i><p class="mt-2">JavaScript</p></div>
+            <div><i class="fab fa-bootstrap text-4xl text-purple-600"></i><p class="mt-2">Bootstrap</p></div>
+            <div>
+              <img src="https://sudoaugustin.gallerycdn.vsassets.io/extensions/sudoaugustin/tailwindcss-transpiler/0.0.8/1637868312894/Microsoft.VisualStudio.Services.Icons.Default" alt="Tailwind CSS" class="h-9 mx-auto">
+              <p class="mt-2">Tailwind CSS</p>
+            </div>
+            <div>
+              <img src="https://cdn-icons-png.flaticon.com/256/2621/2621311.png" alt="Responsive design" class="h-9 mx-auto">
+              <p class="mt-2">Responsive Design</p></div>
+          </div>
+
+          <!-- Backend -->
+          <h3 class="text-xl font-semibold mb-4">Backend</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12" data-aos="zoom-in">
+            <div><i class="fab fa-java text-4xl text-red-600"></i><p class="mt-2">Java</p></div>
+            <div><i class="fab fa-php text-4xl text-indigo-600"></i><p class="mt-2">PHP</p></div>
+            <div><i class="fab fa-laravel text-4xl text-rose-600"></i><p class="mt-2">Laravel</p></div>
+            <div><i class="fab fa-python text-4xl text-green-600"></i><p class="mt-2">Python</p></div>
+            <div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png" alt="C#" class="h-12 mx-auto">
+              <p class="mt-2">C#</p>
+            </div>
+            <div><i class="fa-solid fa-database text-4xl text-gray-600"></i><p class="mt-2">MySQL</p></div>
+          </div>
+
+          <!-- Sistemas y Herramientas -->
+          <h3 class="text-xl font-semibold mb-4">Sistemas y Herramientas</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center" data-aos="zoom-in">
+            <div><i class="fab fa-windows text-4xl text-blue-700"></i><p class="mt-2">Windows</p></div>
+            <div><i class="fab fa-linux text-4xl text-black dark:!text-white"></i><p class="mt-2">Ubuntu/Linux</p></div>
+            <div><i class="fab fa-git-alt text-4xl text-red-600"></i><p class="mt-2">Git</p></div>
+            <div><i class="fab fa-github text-4xl text-gray-800 dark:!text-white"></i><p class="mt-2">GitHub</p></div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-gray-300 dark:border-white-700" /> <br>
+
+      <!-- PROYECTOS -->
+      <section id="proyectos" aria-label="Ir a sección Proyectos" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+          <h2 class="text-3xl font-bold text-center mb-12">Proyectos personales</h2>
+        
+          <div class="flex flex-wrap justify-center gap-8">
+            <!-- LinkedBiz -->
+            <div class="card h-100 shadow rounded-2xl dark:!bg-gray-800" style="max-width: 12.625rem;">
+              <img src="IMG/logo-linkedbiz.png" class="card-img-top" alt="Proyecto LinkedBiz">
+              <div class="card-body">
+                <h5 class="card-title font-semibold dark:text-gray-100">LinkedBiz</h5>
+                <p class="card-text text-sm dark:text-gray-100 py-3">Red social para conectar empresas y trabajadores. Proyecto de desarrollo de aplicaciones web.</p>
+                <a href="https://github.com/darela2/linkedbiz" class="btn btn-outline-primary btn-sm">Ver más</a>
+              </div>
+            </div>
+            <!-- TaskFlow -->
+            <div class="card h-100 shadow rounded-2xl dark:!bg-gray-800" style="max-width: 12.625rem;">
+              <img src="IMG/taskflow.png" class="card-img-top" alt="Proyecto TaskFlow">
+              <div class="card-body">
+                <h5 class="card-title font-semibold dark:text-gray-100">TaskFlow</h5>
+                <p class="card-text text-sm dark:text-gray-100 py-2">App web para organizar tareas por prioridad y fecha. Gestión de proyectos sencilla y efectiva.</p>
+                <span class="badge bg-warning text-dark mb-2 dark:text-gray-100">En desarrollo</span>
+                <a href="#" class="btn btn-outline-secondary btn-sm disabled">Próximamente</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <br><hr class="border-gray-300 dark:!border-white-700" /><br>
+
+      <!-- CONTACTO -->
+      <section id="contacto" aria-label="Ir a sección Contacto" data-aos="fade-up" data-aos-duration="1000">
+  <div class="container max-w-2xl">
+    <h2 class="text-3xl font-bold text-center mb-8">Contáctame</h2>
+    
+    <form id="contact-form" action="https://formspree.io/f/meolngjw" method="POST" class="bg-white dark:!bg-gray-800 p-6 rounded-2xl shadow space-y-4">
+      <div>
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" class="form-control bg-gray-100 dark:bg-gray-700 dark:text-gray-200" required>
+      </div>
+      <div>
+        <label for="asunto" class="form-label">Asunto</label>
+        <input type="text" id="asunto" name="asunto" class="form-control bg-gray-100 dark:bg-gray-700 dark:text-gray-200" required>
+      </div>
+      <div>
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" class="form-control bg-gray-100 dark:bg-gray-700 dark:text-gray-200" required></textarea>
+      </div>
+      <button id="submit-btn" type="submit" class="btn btn-primary w-full flex items-center justify-center">
+        <span id="btn-text">Enviar</span>
+        <svg id="btn-spinner" class="animate-spin ml-2 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+        </svg>
+      </button>
+    </form>
+
+    <!-- Estado del formulario -->
+    <p id="form-status" class="text-center mt-4 text-sm"></p>
+  </div>
+      </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up" data-aos-duration="1000">
+    <div class="footer-center flex flex-col items-center gap-4 px-1 py-2">
+      <h1 class="text-1xl md:text-2xl font-bold mb-3">&copy; 2025 Darela. Casi todos los derechos reservados.</h1>
+    
+      <!-- Mapa centrado -->
+      <div class="mapa-container w-full flex justify-center">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1572464.4546117845!2d-4.480026681357051!3d39.667273626918224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd665fc0adf9a72b%3A0x3be1ba931772b6d2!2sCastilla-La%20Mancha!5e0!3m2!1ses!2ses!4v1753686304671!5m2!1ses!2ses" 
+          width="100%" 
+          height="300" 
+          style="border:0; max-width: 600px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    
+      <!-- Iconos sociales -->
+      <div class="social-icons flex justify-center gap-6 mt-4 text-white text-3xl">
+        <a href="https://www.linkedin.com/in/david-redondo-lara-66101b2b4/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/darela2" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script de modo oscuro -->
+  <script>
+    const toggleBtn = document.getElementById('toggle-theme');
+    const themeIcon = document.getElementById('theme-icon');
+    const root = document.documentElement;
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        root.classList.add('dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      } else {
+        root.classList.remove('dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      }
+      localStorage.setItem('theme', theme);
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const current = root.classList.contains('dark') ? 'dark' : 'light';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Cargar tema al iniciar
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+  </script>
+
+  <!-- Script de envío -->
+  <script>
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+    const submitBtn = document.getElementById("submit-btn");
+    const btnText = document.getElementById("btn-text");
+    const btnSpinner = document.getElementById("btn-spinner");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+    
+      // Mostrar spinner y desactivar botón
+      btnText.textContent = "Enviando...";
+      btnSpinner.classList.remove("hidden");
+      submitBtn.disabled = true;
+    
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+      
+        if (response.ok) {
+          status.innerHTML = "✅ ¡Mensaje enviado correctamente!";
+          status.className = "text-green-600 text-center mt-4 text-sm";
+          form.reset();
+        } else {
+          status.innerHTML = "❌ Hubo un error. Inténtalo de nuevo.";
+          status.className = "text-red-600 text-center mt-4 text-sm";
+        }
+      } catch (error) {
+        status.innerHTML = "⚠️ Error de conexión.";
+        status.className = "text-yellow-600 text-center mt-4 text-sm";
+      }
+    
+      // Restaurar botón
+      btnText.textContent = "Enviar";
+      btnSpinner.classList.add("hidden");
+      submitBtn.disabled = false;
+    });
+  </script>
+  <!-- Script AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  </body>
+</html>

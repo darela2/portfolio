@@ -1,0 +1,163 @@
+/* ----------------------------------------------
+   RESET BÁSICO Y VARIABLES
+---------------------------------------------- */
+
+/* Elimina márgenes por defecto de todos los elementos,
+   y usa el modelo de caja más intuitivo (incluye padding/border en el ancho/alto) */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Definimos variables CSS reutilizables para colores, tipografía y espaciado */
+:root {
+    --color-primario: #0066cc;         /* Azul principal */
+    --color-secundario: #004999;       /* Azul más oscuro */
+    --color-fondo: #F5F5F5;            /* Fondo claro de la página */
+    --color-texto: #333;               /* Color del texto principal */
+    --color-acento: #ffcc00;           /* Color llamativo para hovers o botones */
+
+    --fuente-general: 'Segoe UI', sans-serif; /* Fuente general */
+    --espaciado: 1rem;                 /* Valor estándar de espaciado */
+}
+
+/* ----------------------------------------------
+   CUERPO Y LAYOUT GENERAL
+---------------------------------------------- */
+
+/* Estilos base del <body>: tipografía, fondo y color de texto */
+body {
+    font-family: var(--fuente-general);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* ----------------------------------------------
+   HEADER Y NAVEGACIÓN
+---------------------------------------------- */
+
+/* Estilos del contenedor <nav>: fondo azul y texto blanco */
+nav {
+    background-color: var(--color-primario);
+    color: white;
+    padding: var(--espaciado);
+}
+
+/* Contenedor superior dentro del nav con logo y botones alineados */
+.arriba {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea separadora sutil */
+}
+
+/* ----------------------------------------------
+   MENSAJE DE BIENVENIDA
+---------------------------------------------- */
+
+/* Bloque centrado con fondo azul oscuro */
+.mensaje {
+    background-color: var(--color-secundario);
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ----------------------------------------------
+   MENÚ PRINCIPAL DE ENLACES
+---------------------------------------------- */
+
+/* Contenedor de enlaces con distribución flexible */
+.menu-principal {
+    display: flex;
+    flex-wrap: wrap; /* Permite que pasen a la siguiente línea si no caben */
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Estilo visual de los enlaces */
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--color-primario);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+/* Efecto hover para los enlaces */
+.menu-principal a:hover {
+    background-color: var(--color-acento);
+    color: black;
+}
+
+/* Tamaño de los íconos SVG en los enlaces */
+.menu-principal svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* ----------------------------------------------
+   CONTENIDO PRINCIPAL (MAIN)
+---------------------------------------------- */
+
+/* Contenedor del contenido principal */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Estilos carrusel */
+.carousel-control-prev:focus:not(:focus-visible),
+.carousel-control-next:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* ----------------------------------------------
+   FOOTER
+---------------------------------------------- */
+
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Íconos sociales grandes y con separación */
+footer .social-icons i {
+    font-size: 3rem;         /* Tamaño de íconos */
+    transition: color 0.3s;
+    color: white;
+}
+
+footer .social-icons a:hover i {
+    color: var(--color-acento); /* Cambia color al hacer hover */
+}
+
+/* Centrado y ajuste del iframe */
+footer .mapa-container iframe {
+    max-width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* Ajustes botón modo oscuro */
+#toggle-theme:active #theme-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}

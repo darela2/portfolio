@@ -1,0 +1,23 @@
+{
+    "name": "Darela - Portfolio Web",
+    "short_name": "Darela",
+    "description": "Portfolio profesional de David Redondo Lara, desarrollador web.",
+    "start_url": "HTML/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1e3a8a",
+    "orientation": "portrait",
+    "lang": "es",
+    "icons": [
+      {
+        "src": "https://cdn-icons-png.flaticon.com/256/6472/6472028.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://cdn-icons-png.flaticon.com/256/6472/6472028.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+} 

@@ -56,10 +56,16 @@
   
   <body class="bg-white text-gray-800 dark:!bg-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-  <!-- Botón modo oscuro -->
-  <div class="fixed top-4 right-4 z-50" data-aos="fade-up" data-aos-duration="1000">
+  <!-- Botones flotantes -->
+  <div class="fixed top-4 right-4 z-50 flex flex-col gap-2">
+    <!-- Botón modo oscuro -->
     <button id="toggle-theme" class="bg-blue-600 dark:bg-yellow-400 text-white dark:text-gray-900 p-2 rounded-full shadow-md hover:scale-105 transition">
       <i id="theme-icon" class="fas fa-moon"></i>
+    </button>
+
+    <!-- Botón cambio de idioma -->
+    <button id="toggle-lang" class="bg-green-600 dark:bg-amber-500 text-white dark:text-gray-900 p-2 rounded-full shadow-md hover:scale-105 transition flex items-center justify-center text-xl">
+      <span id="lang-label">🇪🇸</span>
     </button>
   </div>
 
@@ -71,20 +77,21 @@
       </div>
     </div>
 
+    <!-- Menú principal -->
     <div class="menu-principal">
-      <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
-      <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
-      <a href="#experiencia"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
-      <a href="#educacion"><i class="fa-solid fa-user-graduate"></i> Educación</a>
-      <a href="#habilidades"><i class="fas fa-tools"></i> Habilidades</a>
-      <a href="#proyectos"><i class="fas fa-laptop-code"></i> Proyectos</a>
-      <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+      <a href="#inicio" data-i18n="menu_inicio"> <i class="fas fa-home"></i> Inicio</a>
+      <a href="#sobre-mi" data-i18n="menu_sobre_mi"> <i class="fas fa-user"></i> Sobre mí</a>
+      <a href="#experiencia" data-i18n="menu_experiencia"> <i class="fas fa-briefcase"></i> Experiencia</a>
+      <a href="#educacion" data-i18n="menu_educacion"> <i class="fas fa-user-graduate"></i> Educación</a>
+      <a href="#habilidades" data-i18n="menu_habilidades"> <i class="fas fa-tools"></i> Habilidades</a>
+      <a href="#proyectos" data-i18n="menu_proyectos"> <i class="fas fa-laptop-code"></i> Proyectos</a>
+      <a href="#contacto" data-i18n="menu_contacto"> <i class="fas fa-envelope"></i> Contacto</a>
     </div>
   </nav>
 
   <!-- Bienvenida -->
   <div class="mensaje" data-aos="fade-up" data-aos-duration="1000">
-    <p class="text-white">¡Hola! Bienvenid@ a mi portfolio.</p>
+    <p class="text-white" data-i18n="bienvenida">¡Hola! Bienvenid@ a mi portfolio.</p>
   </div>
 
   <!-- Contenido Principal -->
@@ -93,8 +100,8 @@
     <!-- HERO / INTRO -->
     <section class="py-5" data-aos="fade-up" data-aos-duration="1000">
       <div class="container text-center flex flex-col items-center justify-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hey, soy Darela</h1>
-        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300">Desarrollador de software apasionado por crear experiencias digitales atractivas y funcionales.</p>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero_titulo">Hey, soy Darela</h1>
+        <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300" data-i18n="hero_descripcion">Desarrollador de software apasionado por crear experiencias digitales atractivas y funcionales.</p>
       </div>
     </section>
     
@@ -109,10 +116,10 @@
               <img src="IMG/ghibli.png" alt="Foto de perfil" class="rounded-3xl shadow-lg w-full" data-aos="fade-right">
             </div>
             <div class="col-md-6" data-aos="fade-left">
-              <h2 class="text-3xl font-bold mb-3">Sobre mí</h2>
-              <p>¡Hola!</p>
-              <p>Me llamo David (aunque también puedes llamarme Darela), soy un desarrollador de software con ganas de aprender y poner a prueba mis habilidades a través de soluciones innovadoras y funcionales. Me especializo en crear aplicaciones web optimizadas y orientadas al usuario, utilizando las mejores prácticas en el desarrollo frontend y backend.</p>
-              <p>Mi objetivo como desarrollador es convertir cada desafío en una oportunidad para crecer y enfocarme en nuevos proyectos y experiencias.</p>
+              <h2 class="text-3xl font-bold mb-3" data-i18n="sobre_mi_titulo">Sobre mí</h2>
+              <p data-i18n="sobre_mi_saludo">¡Hola!</p>
+              <p data-i18n="sobre_mi_descripcion">Me llamo David (aunque también puedes llamarme Darela), soy un desarrollador de software con ganas de aprender y poner a prueba mis habilidades a través de soluciones innovadoras y funcionales. Me especializo en crear aplicaciones web optimizadas y orientadas al usuario, utilizando las mejores prácticas en el desarrollo frontend y backend.</p>
+              <p data-i18n="sobre_mi_objetivo">Mi objetivo como desarrollador es convertir cada desafío en una oportunidad para crecer y enfocarme en nuevos proyectos y experiencias.</p>
             </div>
           </div>
         </div>
@@ -123,15 +130,15 @@
       <!-- EXPERIENCIA -->
       <section id="experiencia" aria-label="Ir a sección Experiencia" class="py-16" data-aos="fade-up" data-aos-duration="1000">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12">Experiencia</h2>
+          <h2 class="text-3xl font-bold text-center mb-12" data-i18n="experiencia_titulo">Experiencia</h2>
           
            <!-- Copermática -->
             <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
               <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEHSeIcY-6pLA/company-logo_200_200/B4DZaqDLKwG0AI-/0/1746609681546/copermatica_logo?e=2147483647&v=beta&t=ZOCsgTpnyrP_QFd4eMUei0jNnIbMZBhTKuEMl_Y-zyY" alt="Copermática" class="w-16 h-16 object-contain rounded-2xl" />
               <div>
-                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Desarrollador de software</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Copermática | Tomelloso — 2025</p>
-                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400" data-i18n="experiencia_copermatica_titulo">Desarrollador de software</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="experiencia_copermatica_fechas">Copermática | Tomelloso — 2025</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-300" data-i18n="experiencia_copermatica_descripcion">
                   Periodo de prácticas como desarrollador de software, participando en el desarrollo colaborativo de aplicaciones empresariales a través del control de versiones Git y el entorno Azure DevOps.
                 </p>
               </div>
@@ -141,9 +148,9 @@
             <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
               <img src="https://www.lokinn.com/media/empresas/3599879/logo.png" alt="Yotta Desarrollos" class="w-16 h-16 object-contain rounded-2xl" />
               <div>
-                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Prácticas en Empresa</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Yotta Desarrollos Tecnológicos | Albacete — 2024</p>
-                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400" data-i18n="experiencia_yotta_titulo">Desarrollador web</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="experiencia_yotta_fechas">Yotta Desarrollos Tecnológicos | Albacete — 2024</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-300" data-i18n="experiencia_yotta_descripcion">
                   Colaboración en el acceso a datos a través de procesos de web scraping, utilizando para ello procesos de extracción de información en páginas web estáticas (xPath, cURL) y dinámicas (Puppeteer).
                 </p>
               </div>
@@ -157,16 +164,16 @@
       <!-- EDUCACIÓN -->
       <section id="educacion" aria-label="Ir a sección Educación" class="py-16" data-aos="fade-up" data-aos-duration="1000">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12">Educación</h2>
+          <h2 class="text-3xl font-bold text-center mb-12" data-i18n="educacion_titulo">Educación</h2>
         
           <div class="space-y-8">
             <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
               <img src="https://www.formacion.cc/img_centros/249/logoCentro.gif" alt="CEAT" class="w-16 h-16 object-contain rounded-2xl" />
               <div>
-                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Curso de Diseño Web Multidispositivo con IA</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Centro de Estudios CEAT, Tomelloso — 2025</p>
-                <p class="mt-2 text-gray-700 dark:text-gray-400">
-                  Curso de diseño y programación orientado al manejo de páginas web a través de herramientas como Wordpress.
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400" data-i18n="educacion_ceat_titulo">Diseño Web Multidispositivo con IA</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="educacion_ceat_fechas">Centro de Estudios CEAT, Tomelloso — 2025</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-400" data-i18n="educacion_ceat_descripcion">
+                  Diseño y programación orientado al manejo de páginas web a través de herramientas como Wordpress.
                 </p>
               </div>
             </div>
@@ -174,9 +181,9 @@
             <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
               <img src="https://media-exp1.licdn.com/dms/image/C560BAQFc1q3IVGAQ9g/company-logo_200_200/0/1519871479807?e=2159024400&v=beta&t=tHkrFjtqDNu_fUfHIn07v7Fpb95cigmv0iVyIo5Iu54" alt="IES Da Vinci" class="w-16 h-16 object-contain rounded-2xl" />
               <div>
-                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Grado Superior en Desarrollo de Aplicaciones Web</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">IES Leonardo Da Vinci, Albacete — 2022 - 2024</p>
-                <p class="mt-2 text-gray-700 dark:text-gray-400">
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400" data-i18n="educacion_ies_titulo">Grado Superior en Desarrollo de Aplicaciones Web</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400" data-i18n="educacion_ies_fechas">IES Leonardo Da Vinci, Albacete — 2022 - 2024</p>
+                <p class="mt-2 text-gray-700 dark:text-gray-400" data-i18n="educacion_ies_descripcion">
                   Formación profesional especializada en el diseño, desarrollo y mantenimiento de aplicaciones web utilizando tecnologías frontend y backend.
                 </p>
               </div>
@@ -185,10 +192,10 @@
             <div class="flex items-center gap-6 bg-white dark:!bg-gray-800 p-6 rounded-lg shadow-md hover:-translate-y-2 hover:shadow-lg transition-transform duration-300">
               <img src="https://multimedia.infojobs.net/api/v1/tenants/c7e2b9c1-8480-43b0-ad9e-000c17aa2cbb/domains/718302b6-5343-43d3-a8a3-829dc3da0893/buckets/6f3ab1cc-5920-4f4e-b131-46a4587a0e1f/images/f2/f296170a-07d8-41c7-95e8-cdf22da9bf8c?jwt=eyJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTM5MjIzNDEsInJxcyI6IkdFVFxcL3RlbmFudHMvYzdlMmI5YzEtODQ4MC00M2IwLWFkOWUtMDAwYzE3YWEyY2JiL2RvbWFpbnMvNzE4MzAyYjYtNTM0My00M2QzLWE4YTMtODI5ZGMzZGEwODkzL2J1Y2tldHMvNmYzYWIxY2MtNTkyMC00ZjRlLWIxMzEtNDZhNDU4N2EwZTFmL2ltYWdlcy9mMi9mMjk2MTcwYS0wN2Q4LTQxYzctOTVlOC1jZGYyMmRhOWJmOGMiLCJtZXRhZGF0YSI6eyJydWxlIjp7InZlcnNpb24iOiIyMDE2LTEwIiwiYWN0aW9ucyI6W119fX0.l3AYSQL3_KYNRkgUXLutVJlaCpOZsek1txfEGVbOnq-XSjyTRTIMJJWWmQqHjCIaZfHXdlYrkJDahvyTPTlx_9cvWF1n6C8HwTJRymsyMLQ7TE7wf0FJPzqjm6x-_lh2FOQYnEwk5VjLm8iZ9GTHuXWq-9lG-SINJAg2r3FLdhWV1bdbGRZmudZ8WUdtChRJ6wbCHxSmMd7yhwByKrA1Ie2I2lhXO-5VoxHHRns7Qp-pVx8CV_nZpQSbd1ZGA0e6uLkiBdfdmobdRWVl1GShtgZyojfjzbEZgwxjAS1WiaePoj6qB9ips8Q7kRrr4Ab4_C74Oieh9MkUmVGl_tPXzA&AccessKeyId=d724d9a53d95a810" alt="OpenWebinars" class="w-16 h-16 object-contain rounded-2xl" />
               <div>
-                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400">Curso de Introducción al Diseño Web y UX/UI</h3>
+                <h3 class="text-xl font-semibold text-blue-700 dark:text-yellow-400" data-i18n="educacion_openwebinars_titulo">Introducción al Diseño Web y UX/UI</h3>
                 <p class="text-sm text-gray-600 dark:text-gray-400">OpenWebinars — 2023</p>
-                <p class="mt-2 text-gray-700 dark:text-gray-400">
-                  Curso orientado a crear interfaces atractivas y funcionales, enfocado en la experiencia del usuario con herramientas modernas.
+                <p class="mt-2 text-gray-700 dark:text-gray-400" data-i18n="educacion_openwebinars_descripcion">
+                  Formación orientada a crear interfaces atractivas y funcionales, enfocado en la experiencia del usuario con herramientas modernas.
                 </p>
               </div>
             </div>
@@ -201,7 +208,7 @@
       <!-- HABILIDADES -->
       <section id="habilidades" aria-label="Ir a sección Habilidades" class="py-16" data-aos="fade-up" data-aos-duration="1000">
         <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12">Habilidades</h2>
+          <h2 class="text-3xl font-bold text-center mb-12" data-i18n="habilidades_titulo">Habilidades</h2>
 
           <!-- Frontend -->
           <h3 class="text-xl font-semibold mb-4">Frontend</h3>
@@ -234,7 +241,7 @@
           </div>
 
           <!-- Sistemas y Herramientas -->
-          <h3 class="text-xl font-semibold mb-4">Sistemas y Herramientas</h3>
+          <h3 class="text-xl font-semibold mb-4" data-i18n="habilidades_sistemas_titulo">Sistemas y Herramientas</h3>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center" data-aos="zoom-in">
             <div><i class="fab fa-windows text-4xl text-blue-700"></i><p class="mt-2">Windows</p></div>
             <div><i class="fab fa-linux text-4xl text-black dark:!text-white"></i><p class="mt-2">Ubuntu/Linux</p></div>
@@ -250,7 +257,7 @@
       <!-- PROYECTOS -->
       <section id="proyectos" aria-label="Ir a sección Proyectos" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
-          <h2 class="text-3xl font-bold text-center mb-12">Proyectos personales</h2>
+          <h2 class="text-3xl font-bold text-center mb-12" data-i18n="proyectos_titulo">Proyectos personales</h2>
         
           <div class="flex flex-wrap justify-center gap-8">
             <!-- LinkedBiz -->
@@ -258,8 +265,8 @@
               <img src="IMG/logo-linkedbiz.png" class="card-img-top" alt="Proyecto LinkedBiz">
               <div class="card-body">
                 <h5 class="card-title font-semibold dark:text-gray-100">LinkedBiz</h5>
-                <p class="card-text text-sm dark:text-gray-100 py-3">Red social para conectar empresas y trabajadores. Proyecto de desarrollo de aplicaciones web.</p>
-                <a href="https://github.com/darela2/linkedbiz" class="btn btn-outline-primary btn-sm">Ver más</a>
+                <p class="card-text text-sm dark:text-gray-100 py-3" data-i18n="proyectos_linkedbiz_descripcion">Red social para conectar empresas y trabajadores. Proyecto de desarrollo de aplicaciones web.</p>
+                <a href="https://github.com/darela2/linkedbiz" class="btn btn-outline-primary btn-sm" data-i18n="proyectos_linkedbiz_ver_mas">Ver más</a>
               </div>
             </div>
             <!-- TaskFlow -->
@@ -267,9 +274,9 @@
               <img src="IMG/taskflow.png" class="card-img-top" alt="Proyecto TaskFlow">
               <div class="card-body">
                 <h5 class="card-title font-semibold dark:text-gray-100">TaskFlow</h5>
-                <p class="card-text text-sm dark:text-gray-100 py-2">App web para organizar tareas por prioridad y fecha. Gestión de proyectos sencilla y efectiva.</p>
-                <span class="badge bg-warning text-dark mb-2 dark:text-gray-100">En desarrollo</span>
-                <a href="#" class="btn btn-outline-secondary btn-sm disabled">Próximamente</a>
+                <p class="card-text text-sm dark:text-gray-100 py-2" data-i18n="proyectos_taskflow_descripcion">App web para organizar tareas por prioridad y fecha. Gestión de proyectos sencilla y efectiva.</p>
+                <span class="badge bg-warning text-dark mb-2 dark:text-gray-100" data-i18n="proyectos_taskflow_estado">En desarrollo</span>
+                <a href="#" class="btn btn-outline-secondary btn-sm disabled" data-i18n="proyectos_taskflow_ver_mas">Próximamente</a>
               </div>
             </div>
           </div>
@@ -282,7 +289,7 @@
       <!-- CONTACTO -->
       <section id="contacto" aria-label="Ir a sección Contacto" data-aos="fade-up" data-aos-duration="1000">
   <div class="container max-w-2xl">
-    <h2 class="text-3xl font-bold text-center mb-8">Contáctame</h2>
+    <h2 class="text-3xl font-bold text-center mb-8" data-i18n="contacto_titulo">Contáctame</h2>
     
     <form id="contact-form" action="https://formspree.io/f/meolngjw" method="POST" class="bg-white dark:!bg-gray-800 p-6 rounded-2xl shadow space-y-4">
       <div>
@@ -290,15 +297,15 @@
         <input type="email" id="email" name="email" class="form-control bg-gray-100 dark:bg-gray-700 dark:text-gray-200" required>
       </div>
       <div>
-        <label for="asunto" class="form-label">Asunto</label>
+        <label for="asunto" class="form-label" data-i18n="contacto_asunto">Asunto</label>
         <input type="text" id="asunto" name="asunto" class="form-control bg-gray-100 dark:bg-gray-700 dark:text-gray-200" required>
       </div>
       <div>
-        <label for="mensaje" class="form-label">Mensaje</label>
+        <label for="mensaje" class="form-label" data-i18n="contacto_mensaje">Mensaje</label>
         <textarea id="mensaje" name="mensaje" rows="4" class="form-control bg-gray-100 dark:bg-gray-700 dark:text-gray-200" required></textarea>
       </div>
       <button id="submit-btn" type="submit" class="btn btn-primary w-full flex items-center justify-center">
-        <span id="btn-text">Enviar</span>
+        <span id="btn-text" data-i18n="contacto_boton_enviar">Enviar</span>
         <svg id="btn-spinner" class="animate-spin ml-2 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
@@ -316,7 +323,7 @@
   <!-- Footer -->
   <footer data-aos="fade-up" data-aos-duration="1000">
     <div class="footer-center flex flex-col items-center gap-4 px-1 py-2">
-      <h1 class="text-1xl md:text-2xl font-bold mb-3">&copy; 2025 Darela. Casi todos los derechos reservados.</h1>
+      <h1 class="text-1xl md:text-2xl font-bold mb-3" data-i18n="footer_copyright">&copy; 2025 Darela. Casi todos los derechos reservados.</h1>
     
       <!-- Mapa centrado -->
       <div class="mapa-container w-full flex justify-center">
@@ -415,6 +422,138 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <!-- Script de traducción (se mejorará en el futuro) -->
+  <script>
+    const langBtn = document.getElementById('toggle-lang');
+    const langLabel = document.getElementById('lang-label');
+
+    const translations = {
+      es: {
+        menu_inicio: "Inicio",
+        menu_sobre_mi: "Sobre mí",
+        menu_experiencia: "Experiencia",
+        menu_educacion: "Educación",
+        menu_habilidades: "Habilidades",
+        menu_proyectos: "Proyectos",
+        menu_contacto: "Contacto",
+        bienvenida: "¡Hola! Bienvenid@ a mi portfolio.",
+        sobre_mi_titulo: "Sobre mí",
+        sobre_mi_saludo: "¡Hola!",
+        sobre_mi_descripcion: "Me llamo David (aunque también puedes llamarme Darela), soy un desarrollador de software con ganas de aprender y poner a prueba mis habilidades a través de proyectos desafiantes.",
+        sobre_mi_objetivo: "Mi objetivo como desarrollador es convertir cada desafío en una oportunidad para crecer y enfocarme en nuevos proyectos y experiencias.",
+        hero_titulo: "Hey, soy Darela",
+        hero_descripcion: "Desarrollador de software apasionado por crear experiencias digitales atractivas y funcionales.",
+        about_title: "Sobre mí",
+        about_text: "Me llamo David, aunque también puedes llamarme Darela. Soy un desarrollador de software con ganas de aprender y poner a prueba mis habilidades.",
+        experiencia: "Experiencia",
+        experiencia_copermatica_titulo: "Desarrollador de software",
+        experiencia_copermatica_fechas: "Copermática | Tomelloso — 2025",
+        experiencia_copermatica_descripcion: "Periodo de prácticas como desarrollador de software, participando en el desarrollo colaborativo de aplicaciones empresariales a través del control de versiones Git y el entorno Azure DevOps.",
+        experiencia_yotta_titulo: "Desarrollador web",
+        experiencia_yotta_fechas: "Yotta Desarrollos Tecnológicos | Albacete — 2024",
+        experiencia_yotta_descripcion: "Colaboración en el acceso a datos a través de procesos de web scraping, utilizando para ello procesos de extracción de información en páginas web estáticas (xPath, cURL) y dinámicas (Puppeteer).",
+        educacion_titulo: "Educación",
+        educacion_ceat_titulo: "Diseño Web Multidispositivo con IA",
+        educacion_ceat_fechas: "Centro de Estudios CEAT, Tomelloso — 2025",
+        educacion_ceat_descripcion: "Diseño y programación orientado al manejo de páginas web a través de herramientas como Wordpress.",
+        educacion_ies_titulo: "Grado Superior en Desarrollo de Aplicaciones Web",
+        educacion_ies_fechas: "IES Leonardo Da Vinci, Albacete — 2022 - 2024",
+        educacion_ies_descripcion: "Formación profesional especializada en el diseño, desarrollo y mantenimiento de aplicaciones web utilizando tecnologías frontend y backend.",
+        educacion_openwebinars_titulo: "Introducción al Diseño Web y UX/UI",
+        educacion_openwebinars_descripcion: "Formación orientada a crear interfaces atractivas y funcionales, enfocado en la experiencia del usuario con herramientas modernas.",
+        habilidades_titulo: "Habilidades",
+        habilidades_sistemas_titulo: "Sistemas y Herramientas",
+        proyectos_titulo: "Proyectos personales",
+        educacion: "Educación",
+        habilidades: "Habilidades",
+        proyectos: "Proyectos destacados",
+        proyectos_linkedbiz_titulo: "LinkedBiz",
+        proyectos_linkedbiz_descripcion: "Red social para conectar empresas y trabajadores. Proyecto de desarrollo de aplicaciones web.",
+        proyectos_linkedbiz_ver_mas: "Ver más",
+        proyectos_taskflow_titulo: "TaskFlow",
+        proyectos_taskflow_descripcion: "App web para organizar tareas por prioridad y fecha. Gestión de proyectos sencilla y efectiva.",
+        proyectos_taskflow_estado: "En desarrollo",
+        proyectos_taskflow_ver_mas: "Próximamente",
+        contacto: "Contáctame",
+        contacto_titulo: "Contáctame",
+        contacto_asunto: "Asunto",
+        contacto_mensaje: "Mensaje",
+        contacto_boton_enviar: "Enviar",
+        footer_copyright: "© 2025 Darela. Casi todos los derechos reservados."
+      },
+      en: {
+        menu_inicio: "Home",
+        menu_sobre_mi: "About Me",
+        menu_experiencia: "Experience",
+        menu_educacion: "Education",
+        menu_habilidades: "Skills",
+        menu_proyectos: "Projects",
+        menu_contacto: "Contact",
+        bienvenida: "Hello! Welcome to my portfolio.",
+        sobre_mi_titulo: "About Me",
+        sobre_mi_saludo: "Hi!",
+        sobre_mi_descripcion: "My name is David (but you can call me Darela), I'm a software developer eager to learn and test my skills through challenging projects. I'm based in Castilla-La Mancha, Spain.",
+        sobre_mi_objetivo: "My goal as a developer is to turn every challenge into an opportunity to grow and focus on new projects and experiences.",
+        hero_titulo: "Hey, I'm Darela",
+        hero_descripcion: "Passionate software developer about creating engaging and functional digital experiences.",
+        experiencia: "Experience",
+        experiencia_copermatica_titulo: "Software Developer",
+        experiencia_copermatica_fechas: "Copermática | Tomelloso (Spain) — 2025",
+        experiencia_copermatica_descripcion: "Internship period as a software developer, taking part in the collaborative development of business applications through Git version control and the Azure DevOps environment.",
+        experiencia_yotta_titulo: "Web Developer",
+        experiencia_yotta_fechas: "Yotta Desarrollos Tecnológicos | Albacete (Spain) — 2024",
+        experiencia_yotta_descripcion: "Collaboration in data access through web scraping processes, using extraction methods on static (xPath, cURL) and dynamic (Puppeteer) web pages.",
+        educacion_titulo: "Education",
+        educacion_ceat_titulo: "Multidevice Web Design with AI (Level 5 EQF)",
+        educacion_ceat_fechas: "Centro de Estudios CEAT, Tomelloso (Spain) — 2025",
+        educacion_ceat_descripcion: "Design and programming focused on managing web pages using tools like Wordpress.",
+        educacion_ies_titulo: "Higher Education in Web Application Development (Level 5 EQF)",
+        educacion_ies_fechas: "IES Leonardo Da Vinci, Albacete (Spain) — 2022 - 2024",
+        educacion_ies_descripcion: "Professional training specialized in the design, development, and maintenance of web applications using frontend and backend technologies.",
+        educacion_openwebinars_titulo: "Introduction to Web Design and UX/UI",
+        educacion_openwebinars_descripcion: "Online education focused on creating attractive and functional interfaces, user-experience based with modern tools.",
+        habilidades_titulo: "Skills",
+        habilidades_sistemas_titulo: "Systems and Tools",
+        proyectos_titulo: "Personal Projects",
+        educacion: "Education",
+        habilidades: "Skills",
+        proyectos: "My Projects",
+        proyectos_linkedbiz_titulo: "LinkedBiz",
+        proyectos_linkedbiz_descripcion: "Social network to connect companies and workers. Web application development project.",
+        proyectos_linkedbiz_ver_mas: "See more",
+        proyectos_taskflow_titulo: "TaskFlow",
+        proyectos_taskflow_descripcion: "Web app to organize tasks by priority and date. Simple and effective project management.",
+        proyectos_taskflow_estado: "In development",
+        proyectos_taskflow_ver_mas: "Coming soon",
+        contacto: "Contact Me",
+        contacto_titulo: "Contact Me",
+        contacto_asunto: "Subject",
+        contacto_mensaje: "Message",
+        contacto_boton_enviar: "Send",
+        footer_copyright: "© 2025 Darela. Almost all rights reserved."
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      langLabel.textContent = lang === 'es' ? '🇪🇸' : '🇬🇧';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) el.textContent = translations[lang][key];
+      });
+    }
+
+    langBtn.addEventListener('click', () => {
+      const current = localStorage.getItem('lang') || 'es';
+      setLanguage(current === 'es' ? 'en' : 'es');
+    });
+
+    // Cargar idioma guardado o predeterminado
+    const savedLang = localStorage.getItem('lang') || 'es';
+    setLanguage(savedLang);
   </script>
 
   </body>
